@@ -1,0 +1,32 @@
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @include fluid(gap, 40px, 20px, 320px, 1440px);
+
+  &-value {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    color: $colorWhite;
+
+    @include fluid(font-size, 20px, 16px, 320px, 1440px);
+    @include fluid(line-height, 26px, 22px, 320px, 1440px);
+
+    i {
+      --size: 6px;
+    }
+  }
+
+  &-flag {
+    width: 100%;
+    max-width: 36px;
+
+    img,
+    picture {
+      width: 100%;
+    }
+  }
+}
