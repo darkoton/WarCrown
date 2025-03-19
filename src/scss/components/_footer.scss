@@ -1,1 +1,123 @@
 //< " ФАЙЛ СТИЛЕЙ ФУТЕРА " >=============================================================================================================>//
+.footer {
+  background-color: $colorBg;
+  &__main {
+    @include fluid(padding-top, 40px, 20px, 320px, 1440px);
+    @include fluid(padding-bottom, 48px, 24px, 320px, 1440px);
+
+    & ._container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 293px;
+
+    @include fluid(gap, 40px, 20px, 320px, 1440px);
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 215px;
+
+    img,
+    picture {
+      width: 100%;
+    }
+  }
+
+  &__desc {
+    font-weight: 400;
+    color: $colorGray;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1440px);
+    @include fluid(line-height, 19px, 15px, 320px, 1440px);
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    @include fluid(gap, 24px, 12px, 320px, 1440px);
+  }
+
+  &__title {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: $colorGray;
+    opacity: 0.5;
+    font-family: $fontReemKufi;
+
+    @include fluid(font-size, 20px, 16px, 320px, 1440px);
+    @include fluid(line-height, 26px, 12px, 320px, 1440px);
+  }
+
+  &__link {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: $colorGray;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1440px);
+    @include fluid(line-height, 21px, 17px, 320px, 1440px);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorBlue;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+
+    @include fluid(gap, 20px, 10px, 320px, 1440px);
+  }
+
+  &__contact {
+    color: $colorGray;
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorRed;
+      }
+    }
+
+    i {
+      --size: 25px;
+    }
+  }
+
+  &__rights {
+    background-color: #273257;
+
+    @include fluid(padding-top, 20px, 10px, 320px, 1440px);
+    @include fluid(padding-bottom, 20px, 10px, 320px, 1440px);
+
+    &-text {
+      color: $colorGray;
+      font-weight: 400;
+
+      letter-spacing: 0.02em;
+
+      @include fluid(font-size, 16px, 12px, 320px, 1920px);
+      @include fluid(line-height, 21px, 17px, 320px, 1920px);
+    }
+  }
+
+  @media (max-width: 840px) {
+    &__main {
+      & ._container {
+        justify-content: flex-start;
+      }
+    }
+  }
+}
