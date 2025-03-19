@@ -3,8 +3,6 @@
 
 @@include("./modules/device.js"); //DEFINE DEVICE
 
-@@include("./components/header-feed.js"); //HEADER FEED
-
 @@include("./components/burger.js"); //HEADER BURGER MENU
 
 /* @@include("./modules/preloader.js"); // PRELOADER */ 
@@ -13,12 +11,11 @@
 
 /* @@include("./modules/scroll_header.js")  // SCROLL HEADER */ 
 
-
 /* @@include "./modules/animate_scroll.js" // ANIMATE WITH SCROLL */  
 
 /*@@include("./modules/tabs.js"); // TABS */
 
-/*@@include("./modules/spoiler.js"); // TABS */
+@@include("./modules/spoiler.js"); // SPOILER
 
 /* @@include("./modules/parallax.js")  // PARALLAX EFFECT */
 

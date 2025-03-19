@@ -1,4 +1,4 @@
-const feed = document.querySelector('.header__bottom-feed');
+const feed = document.querySelector('.feed__main');
 const offset = -1 * ((feed.scrollWidth - feed.clientWidth) / feed.clientWidth).toFixed(2) * 100;
 
 feed.style.animationDuration = `${-1 * offset * 0.2}s`;

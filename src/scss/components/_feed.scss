@@ -1,0 +1,95 @@
+.feed {
+  background-color: $colorGrayBlue;
+  font-family: $fontRoboto;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    background: linear-gradient(90deg, transparent 0%, $colorGrayBlue 100%);
+  }
+
+  &__body {
+    @include fluid(padding-top, 14px, 7px, 320px, 1440px);
+    @include fluid(padding-bottom, 14px, 7px, 320px, 1440px);
+  }
+
+  &__main {
+    display: flex;
+    white-space: nowrap;
+    animation: scrolling 12s linear 0s infinite alternate both;
+
+    @include fluid(gap, 40px, 20px, 320px, 1440px);
+  }
+
+  &__game {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: $fontRoboto;
+
+    &-text {
+      font-weight: 400;
+      color: $colorGray;
+
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
+      @include fluid(line-height, 19px, 15px, 320px, 1440px);
+    }
+
+    &-winner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $colorGray;
+
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
+      @include fluid(line-height, 19px, 15px, 320px, 1440px);
+
+      &.blue {
+        color: $colorBlue;
+      }
+
+      &.red {
+        color: $colorRed;
+      }
+
+      i {
+        --size: 12px;
+      }
+    }
+
+    &-score {
+      color: $colorGray;
+      opacity: 0.5;
+
+      @include fluid(font-size, 14px, 12px, 320px, 1440px);
+      @include fluid(line-height, 16px, 14px, 320px, 1440px);
+    }
+  }
+
+  &__new {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: $colorGray;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1440px);
+    @include fluid(line-height, 19px, 15px, 320px, 1440px);
+
+    &-category {
+      font-weight: 700;
+    }
+
+    &-date {
+      font-weight: 400;
+      color: $colorGray;
+      opacity: 0.5;
+      @include fluid(font-size, 14px, 12px, 320px, 1440px);
+      @include fluid(line-height, 16px, 14px, 320px, 1440px);
+    }
+  }
+}

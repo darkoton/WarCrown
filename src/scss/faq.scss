@@ -20,7 +20,6 @@
 @import "./modules/_ui";
 
 //< " body SITE " >=============================================================================================================>//
-
 body {
   background-color: $colorBg;
   font-family: $fontRoboto;
@@ -59,12 +58,8 @@ body {
 
 //< " FILES COMPONENTS " >=============================================================================================================>//
 @import "./components/_header";
-@import "./components/_feed";
-@import "./components/_main";
-@import "./components/_news";
-@import "./components/_lich";
-@import "./components/_war";
-@import "./components/_mission";
+@import "./components/_faq";
+
 @import "./components/_footer";
 // @import "./components/_preloader";
 
