@@ -962,7 +962,7 @@ body._lock-scroll {
 }
 
 .main {
-  background: url("../img/MAIN/bg.jpg") 0 0/cover no-repeat;
+  background: url("../img/main/bg.jpg") 0 0/cover no-repeat;
 }
 .main__body {
   display: flex;
