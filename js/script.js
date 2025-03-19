@@ -38,39 +38,27 @@ function isDevice () {
 
 isDevice(); //DEFINE DEVICE
 
-const feed = document.querySelector('.header__bottom-feed');
-const offset = -1 * ((feed.scrollWidth - feed.clientWidth) / feed.clientWidth).toFixed(2) * 100;
-
-feed.style.animationDuration = `${-1 * offset * 0.2}s`;
-
-const cssAnimation = document.createElement('style');
-cssAnimation.type = 'text/css';
-
-const animationScrolling = document.createTextNode(`
-      @keyframes scrolling {
-        0%{
-          transform: translateX(0);
-        }
-        100%{
-          transform: translateX(${offset}%);
-        }
-      }
-  `);
-
-cssAnimation.appendChild(animationScrolling);
-document.getElementsByTagName('head')[0].appendChild(cssAnimation);
-; //HEADER FEED
-
 const menu = document.querySelector('.header__menu');
+const menuBackward = document.querySelector('.header__menu-backward');
 const burgerButton = document.querySelector('.header__burger');
 const closeButton = document.querySelector('.header__close');
 
 burgerButton.addEventListener('click', () => {
   menu.classList.add('_active');
+  menuBackward.classList.add('_active');
+  document.body.classList.add('_lock-scroll');
 });
 
 closeButton.addEventListener('click', () => {
   menu.classList.remove('_active');
+  menuBackward.classList.remove('_active');
+  document.body.classList.remove('_lock-scroll');
+});
+
+menuBackward.addEventListener('click', () => {
+  menu.classList.remove('_active');
+  menuBackward.classList.remove('_active');
+  document.body.classList.remove('_lock-scroll');
 });
 ; //HEADER BURGER MENU
 
@@ -272,7 +260,6 @@ dynamicAdaptive()  // DYNAMIC ADAPTIVE */
 }
 scrollHeader()  // SCROLL HEADER */ 
 
-
 /* @@include "./modules/animate_scroll.js" // ANIMATE WITH SCROLL */  
 
 /*let tabs = () => {
@@ -302,7 +289,7 @@ scrollHeader()  // SCROLL HEADER */
 
 tabs(); // TABS */
 
-/*const spollersArray = document.querySelectorAll('[data-spollers]');
+const spollersArray = document.querySelectorAll('[data-spollers]');
 
 if (spollersArray.length > 0) {
   // Получение обычных спойлеров
@@ -480,7 +467,7 @@ let _slideToggle = (target, duration = 500) => {
   } else {
     return _slideUp(target, duration);
   }
-}; // TABS */
+}; // SPOILER
 
 /* function parallax() {
   document.addEventListener("mousemove", function (e) {
