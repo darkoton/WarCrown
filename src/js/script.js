@@ -13,7 +13,7 @@
 
 /* @@include("./modules/scroll_header.js")  // SCROLL HEADER */ 
 
-/*@@include("./modules/swiper.js"); // SLIDER SWIPER */
+@@include("./modules/swiper.js"); // SLIDER SWIPER 
 
 /* @@include "./modules/animate_scroll.js" // ANIMATE WITH SCROLL */  
 

@@ -1,8 +1,8 @@
-new Swiper(".swiper", {
-  slidesPerView: 1,
+new Swiper('.news__slider', {
+  slidesPerView: 4,
   spaceBetween: 15,
   grabCursor: true,
-  loop: true,
+  loop: false,
   speed: 800,
 
   autoplay: {
@@ -10,12 +10,22 @@ new Swiper(".swiper", {
   },
 
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.news__nav-prev',
+    prevEl: '.news__nav-next',
   },
 
   breakpoints: {
-    767.8: {},
-  }
+    0: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 2,
+    },
+    680: {
+      slidesPerView: 3,
+    },
+    991.8: {
+      slidesPerView: 4,
+    },
+  },
 });
-

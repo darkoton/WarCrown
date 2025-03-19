@@ -1,5 +1,5 @@
 .main {
-  background: url("../img/MAIN/bg.jpg") 0 0 / cover no-repeat;
+  background: url("../img/main/bg.jpg") 0 0 / cover no-repeat;
 
   &__body {
     display: flex;
@@ -246,11 +246,24 @@
   }
 
   @media (max-width: 576px) {
+    &__left {
+      align-items: center;
+    }
     &__row {
-      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    &__block {
+      align-items: center;
+      &:before,
+      &:after {
+        margin-left: 0;
+      }
     }
     &__desc {
       text-align: center;
+    }
+    &__contacts {
+      margin: 0;
     }
   }
 }
