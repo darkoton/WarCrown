@@ -1,0 +1,126 @@
+.mission {
+  background: url("../img/mission/bg.jpg") 0 0 / cover no-repeat;
+
+  &__body {
+    @include fluid(padding-top, 72px, 30px, 320px, 1440px);
+    @include fluid(padding-bottom, 120px, 60px, 320px, 1440px);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+
+    @include fluid(margin-bottom, 80px, 20px, 320px, 1920px);
+  }
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 40%;
+
+    @include fluid(gap, 40px, 20px, 320px, 1440px);
+  }
+
+  &__title {
+    font-weight: 700;
+    color: $colorGray;
+
+    @include fluid(font-size, 32px, 28px, 320px, 1440px);
+    @include fluid(line-height, 48px, 44px, 320px, 1440px);
+  }
+
+  &__desc {
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    color: $colorGray;
+
+    @include fluid(font-size, 18px, 14px, 320px, 1440px);
+    @include fluid(line-height, 28px, 24px, 320px, 1440px);
+  }
+
+  &__gallery {
+    display: flex;
+
+    @include fluid(gap, 25px, 15px, 320px, 1440px);
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 340px;
+
+    img,
+    picture {
+      width: 100%;
+    }
+  }
+
+  &__list {
+    overflow: visible;
+    position: relative;
+    &::before {
+      content: "";
+      width: 100vw;
+      height: 2px;
+      position: absolute;
+      left: 50%;
+      top: 7px;
+      transform: translateX(-50%);
+      background-color: rgba(233, 233, 233, 0.15);
+    }
+  }
+
+  &__mission {
+    display: flex;
+    flex-direction: column;
+    color: rgba(233, 233, 233, 0.3);
+    transition: all 0.3s ease 0s;
+
+    &.swiper-slide-visible {
+      color: $colorGray;
+    }
+
+    @include fluid(gap, 16px, 10px, 320px, 1920px);
+
+    &::before {
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $colorBlue;
+    }
+
+    &-year {
+      font-family: $fontReemKufi;
+      font-weight: 700;
+
+      @include fluid(font-size, 20px, 16px, 320px, 1920px);
+      @include fluid(line-height, 30px, 26px, 320px, 1920px);
+    }
+
+    &-text {
+      letter-spacing: 0.03em;
+      font-weight: 400;
+
+      @include fluid(font-size, 18px, 14px, 320px, 1920px);
+      @include fluid(line-height, 28px, 24px, 320px, 1920px);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__text {
+      max-width: 90%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__text {
+      max-width: 100%;
+    }
+  }
+}

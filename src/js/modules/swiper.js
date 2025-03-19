@@ -29,3 +29,25 @@ new Swiper('.news__slider', {
     },
   },
 });
+
+new Swiper('.mission__list', {
+  slidesPerView: 4,
+  spaceBetween: 25,
+  grabCursor: true,
+  loop: false,
+  watchSlidesProgress: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1,
+    },
+    550: {
+      slidesPerView: 2,
+    },
+    680: {
+      slidesPerView: 3,
+    },
+    991.8: {
+      slidesPerView: 4,
+    },
+  },
+});

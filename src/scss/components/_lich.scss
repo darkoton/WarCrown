@@ -1,0 +1,70 @@
+.lich {
+  background: url("../img/lich/bg.png") 0 0 / cover no-repeat;
+  @include fluid(margin-top, -60px, -50px, 320px, 1440px);
+
+  &__body {
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 5;
+
+    @include fluid(padding-top, 151px, 75px, 320px, 1440px);
+    @include fluid(padding-bottom, 160px, 75px, 320px, 1440px);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 600px;
+
+    @include fluid(gap, 24px, 12px, 320px, 1440px);
+  }
+
+  &__title {
+    font-family: $fontReemKufi;
+    font-weight: bold;
+    color: $colorGray;
+
+    @include fluid(font-size, 48px, 36px, 320px, 1440px);
+    @include fluid(line-height, 72px, 60px, 320px, 1440px);
+  }
+
+  &__desc {
+    font-weight: 400;
+    color: $colorGray;
+    letter-spacing: 0.03em;
+
+    @include fluid(font-size, 18px, 14px, 320px, 1440px);
+    @include fluid(line-height, 28px, 24px, 320px, 1440px);
+  }
+
+  &__button {
+    font-weight: 500;
+    color: $colorDarkBlue;
+    background: $colorGreen;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1440px);
+    @include fluid(line-height, 19px, 15px, 320px, 1440px);
+    @include fluid(padding-top, 16px, 10px, 320px, 1440px);
+    @include fluid(padding-bottom, 16px, 10px, 320px, 1440px);
+    @include fluid(padding-left, 24px, 16px, 320px, 1440px);
+    @include fluid(padding-right, 24px, 16px, 320px, 1440px);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        background: $colorBlue;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__body {
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+  }
+}

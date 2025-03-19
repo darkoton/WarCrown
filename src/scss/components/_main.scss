@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: column;
 
-    @include fluid(gap, 24px, 12px, 320px, 1920px);
+    @include fluid(gap, 24px, 12px, 320px, 1440px);
   }
 
   &__block {
@@ -59,7 +59,7 @@
     justify-content: center;
     align-items: center;
 
-    @include fluid(gap, 24px, 12px, 320px, 1920px);
+    @include fluid(gap, 24px, 12px, 320px, 1440px);
   }
 
   &__desc {
@@ -69,14 +69,14 @@
     width: 100%;
     max-width: 334px;
 
-    @include fluid(font-size, 18px, 14px, 320px, 1920px);
-    @include fluid(line-height, 28px, 24px, 320px, 1920px);
+    @include fluid(font-size, 18px, 14px, 320px, 1440px);
+    @include fluid(line-height, 28px, 24px, 320px, 1440px);
   }
 
   &__buttons {
     display: flex;
 
-    @include fluid(gap, 16px, 10px, 320px, 1920px);
+    @include fluid(gap, 16px, 10px, 320px, 1440px);
   }
 
   &__button {
@@ -84,26 +84,42 @@
     color: $colorDarkBlue;
     white-space: nowrap;
 
-    @include fluid(font-size, 16px, 12px, 320px, 1920px);
-    @include fluid(line-height, 19px, 15px, 320px, 1920px);
-    @include fluid(padding-top, 16px, 12px, 320px, 1920px);
-    @include fluid(padding-bottom, 16px, 12px, 320px, 1920px);
-    @include fluid(padding-left, 24px, 20px, 320px, 1920px);
-    @include fluid(padding-right, 24px, 20px, 320px, 1920px);
+    @include fluid(font-size, 16px, 12px, 320px, 1440px);
+    @include fluid(line-height, 19px, 15px, 320px, 1440px);
+    @include fluid(padding-top, 16px, 12px, 320px, 1440px);
+    @include fluid(padding-bottom, 16px, 12px, 320px, 1440px);
+    @include fluid(padding-left, 24px, 20px, 320px, 1440px);
+    @include fluid(padding-right, 24px, 20px, 320px, 1440px);
 
     &.green {
       background: $colorGreen;
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background: $colorBlue;
+        }
+      }
     }
 
     &.blue {
       background: $colorBlue;
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background: $colorGreen;
+        }
+      }
     }
   }
 
   &__contacts {
     display: flex;
 
-    @include fluid(gap, 32px, 20px, 320px, 1920px);
+    @include fluid(gap, 32px, 20px, 320px, 1440px);
     @include fluid(margin-left, 28px, 0px, 320px, 1440px);
   }
 
@@ -124,7 +140,7 @@
     display: flex;
     flex-direction: column;
 
-    @include fluid(gap, 12px, 6px, 320px, 1920px);
+    @include fluid(gap, 12px, 6px, 320px, 1440px);
   }
 
   &__card {
@@ -135,7 +151,7 @@
     background: linear-gradient(90deg, rgba(255, 255, 255, 0.26) 0%, rgba(255, 255, 255, 0.01) 100%);
     gap: 4px;
 
-    @include fluid(padding, 16px, 10px, 320px, 1920px);
+    @include fluid(padding, 16px, 10px, 320px, 1440px);
 
     &.ended {
       border-color: $colorYellow;
@@ -145,7 +161,7 @@
     &-bottom {
       display: flex;
       justify-content: space-between;
-      @include fluid(gap, 32px, 16px, 320px, 1920px);
+      @include fluid(gap, 32px, 16px, 320px, 1440px);
     }
 
     &-top {
@@ -161,8 +177,8 @@
       font-weight: 400;
       color: $colorGray;
 
-      @include fluid(font-size, 24px, 18px, 320px, 1920px);
-      @include fluid(line-height, 28px, 22px, 320px, 1920px);
+      @include fluid(font-size, 24px, 18px, 320px, 1440px);
+      @include fluid(line-height, 28px, 22px, 320px, 1440px);
     }
 
     &-statisctic {
@@ -170,8 +186,8 @@
       align-items: center;
       font-weight: 400;
 
-      @include fluid(font-size, 20px, 16px, 320px, 1920px);
-      @include fluid(gap, 16px, 10px, 320px, 1920px);
+      @include fluid(font-size, 20px, 16px, 320px, 1440px);
+      @include fluid(gap, 16px, 10px, 320px, 1440px);
 
       & span:nth-child(1) {
         color: $colorBlue;
@@ -190,7 +206,7 @@
       font-weight: 400;
       color: $colorGray;
 
-      @include fluid(font-size, 16px, 12px, 320px, 1920px);
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
     }
 
     &-read {
@@ -219,14 +235,14 @@
         background-color: $colorGreen;
         font-weight: 600;
 
-        @include fluid(font-size, 14px, 10px, 320px, 1920px);
+        @include fluid(font-size, 14px, 10px, 320px, 1440px);
       }
 
       &-time {
         font-weight: 400;
         color: $colorGray;
 
-        @include fluid(font-size, 16px, 12px, 320px, 1920px);
+        @include fluid(font-size, 16px, 12px, 320px, 1440px);
       }
     }
   }
