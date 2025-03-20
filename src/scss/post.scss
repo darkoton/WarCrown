@@ -60,9 +60,29 @@ body {
   }
 }
 
+.new-page {
+  background: url("../img/news/bg.jpg") 0 0 / cover no-repeat;
+  @include fluid(padding-bottom, 80px, 20px, 320px, 1920px);
+}
+
+.new {
+  display: flex;
+  align-items: flex-start;
+
+  @include fluid(gap, 27px, 15px, 320px, 1920px);
+}
+
+@media (max-width: 992px) {
+  .new {
+    flex-direction: column;
+  }
+}
+
 //< " FILES COMPONENTS " >=============================================================================================================>//
 @import "./components/_header";
-@import "./components/_faq";
+@import "./components/_breadcrumbs";
+@import "./components/_post";
+@import "./components/_news-sidebar";
 
 @import "./components/_footer";
 // @import "./components/_preloader";

@@ -1,5 +1,5 @@
 .news {
-  background: url("../img/news/bg.png") 0 bottom/100% 60% no-repeat;
+  background: url("../img/home/news/bg.png") 0 bottom/100% 60% no-repeat;
 
   &__body {
     @include fluid(padding-bottom, 77px, 30px, 320px, 1440px);
@@ -94,13 +94,36 @@
       display: flex;
       flex-direction: column;
       gap: 4px;
-      background: linear-gradient(180deg, rgba(21, 32, 69, 0) 0%, #152045 100%);
       backdrop-filter: blur(2px);
+      transition: all 0.3s ease 0s;
+      position: absolute;
+      z-index: 2;
 
       @include fluid(padding-top, 21px, 18px, 320px, 1440px);
       @include fluid(padding-bottom, 21px, 18px, 320px, 1440px);
       @include fluid(padding-left, 20px, 15px, 320px, 1440px);
       @include fluid(padding-right, 20px, 15px, 320px, 1440px);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        transition: all 0.3s ease 0s;
+      }
+
+      &::before {
+        background: linear-gradient(180deg, rgba(21, 32, 69, 0) 0%, #152045 100%);
+      }
+
+      &::after {
+        opacity: 0;
+        background: linear-gradient(180deg, rgba(21, 32, 69, 0) 0%, #469af5 100%);
+      }
     }
 
     &-title {
@@ -118,6 +141,21 @@
 
       @include fluid(font-size, 20px, 16px, 320px, 1440px);
       @include fluid(line-height, 23px, 19px, 320px, 1440px);
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        & .news__card-info {
+          &::before {
+            opacity: 0;
+          }
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
     }
   }
 

@@ -55,6 +55,10 @@ body {
   padding: 0px #{calc($containerPadding / 2) + px};
   margin: 0px auto;
   max-width: $maxWidthContainer + px;
+
+  @media (max-width: 680px) {
+    padding: 0px #{calc($containerPadding / 3) + px};
+  }
 }
 
 //< " FILES COMPONENTS " >=============================================================================================================>//

@@ -1,0 +1,108 @@
+.post {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: $colorGrayBlue;
+
+  @include fluid(gap, 24px, 12px, 320px, 1920px);
+
+  &__img {
+    width: 100%;
+
+    img,
+    picture {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    @include fluid(gap, 16px, 8px, 320px, 1920px);
+    @include fluid(padding-top, 24px, 12px, 320px, 1920px);
+    @include fluid(padding-bottom, 40px, 12px, 320px, 1920px);
+    @include fluid(padding-left, 35px, 10px, 320px, 1920px);
+    @include fluid(padding-right, 35px, 10px, 320px, 1920px);
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    row-gap: 5px;
+    flex-wrap: wrap;
+  }
+
+  &__subtitle {
+    color: $colorBlue;
+    font-weight: 400;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1920px);
+    @include fluid(line-height, 16px, 19px, 320px, 1920px);
+  }
+
+  &__right {
+    display: flex;
+    align-items: center;
+
+    @include fluid(gap, 40px, 20px, 320px, 1920px);
+  }
+
+  &__likes {
+    display: flex;
+    align-items: center;
+
+    @include fluid(gap, 16px, 8px, 320px, 1920px);
+  }
+
+  &__like {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    @include fluid(font-size, 14px, 10px, 320px, 1920px);
+    @include fluid(line-height, 16px, 12px, 320px, 1920px);
+
+    &.active {
+      color: $colorGreen;
+    }
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorGreen;
+      }
+    }
+
+    i {
+      @include fluid(--size, 25px, 20px, 320px, 1920px);
+    }
+  }
+
+  &__date {
+    color: rgba(233, 233, 233, 0.3);
+    text-align: right;
+    font-weight: 400;
+
+    @include fluid(font-size, 16px, 12px, 320px, 1920px);
+    @include fluid(line-heght, 19px, 15px, 320px, 1920px);
+  }
+
+  &__title {
+    font-weight: 700;
+    font-family: $fontReemKufi;
+
+    @include fluid(font-size, 24px, 20px, 320px, 1920px);
+    @include fluid(line-height, 36px, 32px, 320px, 1920px);
+  }
+
+  &__desc {
+    font-weight: 400;
+
+    @include fluid(font-size, 18px, 14px, 320px, 1920px);
+    @include fluid(line-height, 21px, 17px, 320px, 1920px);
+  }
+}

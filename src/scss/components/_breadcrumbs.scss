@@ -1,0 +1,32 @@
+.breadcrumbs {
+  @include fluid(padding-top, 24px, 12px, 320px, 1920px);
+  @include fluid(padding-bottom, 24px, 12px, 320px, 1920px);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(233, 233, 233, 0.3);
+
+    @include fluid(gap, 20px, 10px, 320px, 1920px);
+  }
+
+  &__home i {
+    --size: 17px;
+  }
+
+  & a {
+    color: rgba(233, 233, 233, 0.3);
+
+    @media (any-hover: hover) {
+      cursor: pointer;
+      transition: all 0.3s ease 0s;
+      &:hover {
+        color: $colorBlue;
+      }
+    }
+  }
+}

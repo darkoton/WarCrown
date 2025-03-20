@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("components/head.html", {
+  "title": "WarCrown"
+  })
+  <link rel="stylesheet" href="css/post.css">
+</head>
+
+<body>
+  <!-- @@include("components/preloader.html") -->
+
+  <div class="wrapper">
+    <div class="content">
+      @@include("components/header.html")
+      <main class="page">
+        <div class="new-page">
+
+          @@include("components/breadcrumbs.html",{
+          path: ["News", "Return to Outland"]
+          })
+
+
+          <div class="_container">
+
+            <div class="new">
+              @@include("components/post.html")
+              @@include("components/news-sidebar.html")
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+    @@include("components/footer.html")
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
