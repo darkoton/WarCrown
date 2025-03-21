@@ -52,6 +52,7 @@ body {
 
 // ._container
 ._container {
+  width: 100%;
   padding: 0px #{calc($containerPadding / 2) + px};
   margin: 0px auto;
   max-width: $maxWidthContainer + px;

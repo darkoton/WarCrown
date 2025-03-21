@@ -1,0 +1,206 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__item {
+    backdrop-filter: blur(15px);
+    background: rgba(39, 50, 87, 0.8);
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #444d6d;
+    }
+
+    &:nth-child(even) {
+      background: rgba(21, 32, 69, 0.8);
+    }
+
+    &-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+
+      @include fluid(padding-top, 26px, 13px, 320px, 1440px);
+      @include fluid(padding-bottom, 26px, 13px, 320px, 1440px);
+      @include fluid(padding-left, 24px, 12px, 320px, 1440px);
+      @include fluid(padding-right, 24px, 12px, 320px, 1440px);
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      min-width: 296px;
+
+      @include fluid(gap, 16px, 8px, 320px, 1440px);
+    }
+
+    &-icon {
+      width: 100%;
+      max-width: 40px;
+    }
+
+    &-col {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    &-title {
+      font-weight: 600;
+
+      @include fluid(font-size, 20px, 16px, 320px, 1440px);
+      @include fluid(line-height, 23px, 19px, 320px, 1440px);
+    }
+
+    &-desc {
+      color: rgba(233, 233, 233, 0.5);
+
+      @include fluid(font-size, 14px, 10px, 320px, 1440px);
+      @include fluid(line-height, 16px, 12px, 320px, 1440px);
+    }
+
+    &-text {
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
+      @include fluid(line-height, 19px, 15px, 320px, 1440px);
+    }
+
+    &-right {
+      display: flex;
+
+      @include fluid(gap, 40px, 20px, 320px, 1440px);
+    }
+
+    &-counters {
+      display: flex;
+
+      @include fluid(gap, 24px, 12px, 320px, 1440px);
+    }
+
+    &-amount {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-count {
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      text-align: center;
+
+      @include fluid(font-size, 20px, 16px, 320px, 1440px);
+      @include fluid(line-height, 26px, 22px, 320px, 1440px);
+    }
+
+    &-profile {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    &-avatar {
+      width: 100%;
+      max-width: 40px;
+    }
+
+    &-user {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      min-width: 120px;
+    }
+
+    &-username {
+      font-weight: 400;
+      letter-spacing: 0.02em;
+
+      @include fluid(font-size, 16px, 12px, 320px, 1920px);
+      @include fluid(line-height, 21px, 17px, 320px, 1920px);
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          color: $colorBlue;
+        }
+      }
+    }
+
+    &-time {
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: rgba(233, 233, 233, 0.5);
+
+      @include fluid(font-size, 14px, 10px, 320px, 1920px);
+      @include fluid(line-height, 14px, 10px, 320px, 1920px);
+    }
+
+    &-perks {
+      display: flex;
+
+      width: 100%;
+
+      @include fluid(padding-left, 24px, 12px, 320px, 1440px);
+      @include fluid(padding-right, 24px, 12px, 320px, 1440px);
+      @include fluid(padding-bottom, 16px, 8px, 320px, 1440px);
+      @include fluid(gap, 40px, 20px, 320px, 1920px);
+
+      &-col {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    &-perk {
+      display: flex;
+      align-items: center;
+
+      @include fluid(gap, 8px, 4px, 320px, 1920px);
+
+      &-icon {
+        width: 100%;
+        max-width: 32px;
+
+        picture,
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__item {
+      &-middle {
+        display: none;
+      }
+    }
+  }
+
+  @media (max-width: 680px) {
+    &__item {
+      &-left {
+        min-width: auto;
+      }
+      &-col {
+        width: auto;
+      }
+      &-user {
+        min-width: auto;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    &__item {
+      &-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
+}

@@ -47,6 +47,8 @@ body {
 // .content
 .content {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
 }
 
 // ._container
@@ -63,7 +65,9 @@ body {
 
 //< " FILES COMPONENTS " >=============================================================================================================>//
 @import "./components/_header";
-@import "./components/_faq";
+@import "./components/forum/_header";
+@import "./components/forum/_sidebar";
+@import "./components/forum/_list";
 
 @import "./components/_footer";
 // @import "./components/_preloader";
@@ -71,4 +75,36 @@ body {
 //< " MAIN BLOCK " >=============================================================================================================>//
 .page {
   flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.forum {
+  width: 100%;
+  flex: 1 1 auto;
+
+  background: url("../img/forum/bg.jpg") 0 0/ 100% auto no-repeat;
+
+  @include fluid(padding-top, 24px, 12px, 320px, 1920px);
+  @include fluid(padding-bottom, 160px, 40px, 320px, 1920px);
+
+  & ._container {
+    display: flex;
+    flex-direction: column;
+
+    @include fluid(gap, 32px, 16px, 320px, 1920px);
+  }
+
+  &__layout {
+    display: flex;
+    align-items: flex-start;
+
+    @include fluid(gap, 19px, 10px, 320px, 1920px);
+  }
+
+  @media (max-width: 1200px) {
+    &__layout {
+      flex-direction: column;
+    }
+  }
 }

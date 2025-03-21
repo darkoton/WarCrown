@@ -1,0 +1,35 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 238px;
+  background: rgba(21, 32, 69, 0.5);
+
+  @include fluid(padding-top, 24px, 12px, 320px, 1920px);
+  @include fluid(padding-bottom, 30px, 15px, 320px, 1920px);
+  @include fluid(padding-left, 40px, 20px, 320px, 1920px);
+  @include fluid(padding-right, 40px, 20px, 320px, 1920px);
+  @include fluid(gap, 24px, 12px, 320px, 1920px);
+
+  &__link {
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    color: $colorGray;
+    font-family: $fontReemKufi;
+
+    @include fluid(font-size, 20px, 16px, 320px, 1920px);
+    @include fluid(line-height, 30px, 26px, 320px, 1920px);
+
+    &.active {
+      color: $colorBlue;
+      border-bottom: 1px solid rgba(233, 233, 233, 0.15);
+
+      @include fluid(padding-bottom, 16px, 8px, 320px, 1920px);
+    }
+  }
+
+  @media (max-width: 1200px) {
+    max-width: 100%;
+  }
+}

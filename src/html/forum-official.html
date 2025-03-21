@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  @@include("components/head.html", {
+  "title": "WarCrown"
+  })
+  <link rel="stylesheet" href="css/forum.css">
+</head>
+
+<body>
+  <!-- @@include("components/preloader.html") -->
+
+  <div class="wrapper">
+    <div class="content">
+      @@include("components/header.html")
+      <main class="page">
+
+
+        <div class="forum">
+          <div class="_container">
+
+            <div class="forum-header">
+              <h2 class="forum-header__title">Forum</h2>
+
+              <span class="forum-header__line"></span>
+
+              <a href="#" class="forum-header__page">Official </a>
+            </div>
+
+            <div class="forum__layout">
+
+              <ul class="sidebar">
+                <li class="sidebar__item">
+                  <a href="./forum-official.html" class="sidebar__link active">Official </a>
+                </li>
+
+                <li class="sidebar__item">
+                  <a href="./forum-community.html" class="sidebar__link ">Community </a>
+                </li>
+
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link ">The Great Archive </a>
+                </li>
+
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link ">Statistics </a>
+                </li>
+
+                <li class="sidebar__item">
+                  <a href="#" class="sidebar__link ">Who's Online </a>
+                </li>
+              </ul>
+
+              @@include("components/forum/official.html")
+            </div>
+
+          </div>
+        </div>
+      </main>
+      @@include("components/footer.html")
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
