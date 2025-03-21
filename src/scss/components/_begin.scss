@@ -1,0 +1,273 @@
+.begin {
+  background: url("../img/begin/bg.jpg") 0 0 / cover no-repeat;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+
+    @include fluid(padding-top, 48px, 24px, 320px, 1440px);
+    @include fluid(padding-bottom, 160px, 40px, 320px, 1440px);
+    @include fluid(gap, 40px, 20px, 320px, 1440px);
+  }
+
+  &__top {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    row-gap: 10px;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 685px;
+
+    @include fluid(gap, 40px, 20px, 320px, 1440px);
+  }
+
+  &__title {
+    font-weight: 700;
+
+    @include fluid(font-size, 32px, 28px, 320px, 1440px);
+    @include fluid(line-height, 48px, 44px, 320px, 1440px);
+  }
+
+  &__steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+    @include fluid(column-gap, 45px, 20px, 320px, 1440px);
+    @include fluid(row-gap, 80px, 10px, 320px, 1440px);
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include fluid(gap, 32px, 10px, 320px, 1440px);
+
+    &.step-2 {
+      grid-row: span 2;
+      align-self: center;
+    }
+
+    &-title {
+      display: flex;
+      align-items: flex-end;
+      font-weight: 400;
+      font-family: $fontReemKufi;
+
+      @include fluid(font-size, 20px, 16px, 320px, 1440px);
+      @include fluid(line-height, 20px, 16px, 320px, 1440px);
+      @include fluid(gap, 16px, 8px, 320px, 1440px);
+    }
+
+    &-order {
+      font-weight: 400;
+
+      @include fluid(font-size, 42px, 38px, 320px, 1440px);
+      @include fluid(line-height, 42px, 38px, 320px, 1440px);
+    }
+
+    &-desc {
+      font-weight: 400;
+
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
+      @include fluid(line-height, 19px, 15px, 320px, 1440px);
+    }
+
+    &-button {
+      --bg: #b6d64f;
+      --hover-bg: #469af5;
+      font-weight: 500;
+      color: $colorDarkBlue;
+      background: var(--bg);
+
+      &.green {
+        --bg: #b6d64f;
+        --hover-bg: #469af5;
+      }
+
+      &.blue {
+        --bg: #469af5;
+        --hover-bg: #b6d64f;
+      }
+
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
+      @include fluid(line-height, 19px, 15px, 320px, 1440px);
+      @include fluid(padding-top, 16px, 8px, 320px, 1440px);
+      @include fluid(padding-bottom, 16px, 8px, 320px, 1440px);
+      @include fluid(padding-left, 24px, 12px, 320px, 1440px);
+      @include fluid(padding-right, 24px, 12px, 320px, 1440px);
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background: var(--hover-bg);
+        }
+      }
+    }
+  }
+
+  &__orc {
+    width: 100%;
+    max-width: 666px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+
+    @include fluid(bottom, -125px, -72px, 992px, 1440px);
+    @include fluid(max-width, 666px, 320px, 992px, 1440px);
+
+    img,
+    picture {
+      width: 100%;
+    }
+  }
+
+  &__banners {
+    display: flex;
+
+    @include fluid(gap, 22px, 11px, 320px, 1440px);
+  }
+
+  &__banner {
+    display: flex;
+    flex-direction: column;
+
+    @include fluid(gap, 24px, 12px, 320px, 1440px);
+
+    &-img {
+      position: relative;
+      width: 100%;
+
+      img,
+      picture {
+        height: 100%;
+        width: 100%;
+        min-height: 240px;
+        object-fit: cover;
+      }
+    }
+
+    &-info {
+      position: absolute;
+      width: 100%;
+      bottom: 0px;
+      background: linear-gradient(180deg, rgba(21, 32, 69, 0) 0%, #152045 100%);
+      backdrop-filter: blur(2px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      row-gap: 10px;
+
+      @include fluid(padding-top, 28px, 14px, 320px, 1440px);
+      @include fluid(padding-bottom, 33px, 16px, 320px, 1440px);
+      @include fluid(padding-left, 24px, 12px, 320px, 1440px);
+      @include fluid(padding-right, 24px, 12px, 320px, 1440px);
+    }
+
+    &-texts {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    &-title {
+      font-family: $fontReemKufi;
+      font-weight: 700;
+
+      @include fluid(font-size, 24px, 20px, 320px, 1440px);
+      @include fluid(line-height, 36px, 32px, 320px, 1440px);
+    }
+
+    &-desc {
+      font-weight: 400;
+      @include fluid(font-size, 20px, 16px, 320px, 1440px);
+      @include fluid(line-height, 23px, 19px, 320px, 1440px);
+    }
+
+    &-download {
+      display: flex;
+      align-items: center;
+      color: $colorDarkBlue;
+      background-color: $colorGreen;
+      font-weight: 500;
+
+      @include fluid(font-size, 16px, 12px, 320px, 1440px);
+      @include fluid(line-height, 19px, 15px, 320px, 1440px);
+      @include fluid(padding-top, 16px, 8px, 320px, 1440px);
+      @include fluid(padding-bottom, 16px, 8px, 320px, 1440px);
+      @include fluid(padding-left, 24px, 12px, 320px, 1440px);
+      @include fluid(padding-right, 24px, 12px, 320px, 1440px);
+
+      @media (any-hover: hover) {
+        cursor: pointer;
+        transition: all 0.3s ease 0s;
+        &:hover {
+          background-color: $colorBlue;
+        }
+      }
+
+      & .icon-download {
+        @include fluid(--size, 16px, 12px, 320px, 1440px);
+        @include fluid(margin-right, 8px, 4px, 320px, 1440px);
+      }
+
+      & .icon-dots {
+        @include fluid(--size, 16px, 12px, 320px, 1440px);
+        @include fluid(margin-left, 16px, 8px, 320px, 1440px);
+      }
+    }
+
+    &-supports {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 10px;
+
+      @include fluid(column-gap, 40px, 20px, 320px, 1920px);
+    }
+
+    &-option {
+      @include fluid(font-size, 16px, 12px, 320px, 1920px);
+      @include fluid(line-height, 19px, 15px, 320px, 1920px);
+
+      & .blue {
+        color: $colorBlue;
+      }
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    &__banners {
+      flex-direction: column-reverse;
+    }
+
+    &__top {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__orc {
+      position: relative;
+      max-width: 50%;
+
+      @include fluid(bottom, -93px, -40px, 320px, 992px);
+      @include fluid(margin-top, -93px, -40px, 320px, 992px);
+    }
+  }
+
+  @media (max-width: 460px) {
+    &__steps {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
