@@ -1116,12 +1116,12 @@ body._lock-scroll {
 }
 .main__auth.active {
   pointer-events: all;
-  opacity: 0.9;
+  opacity: 1;
   display: flex;
 }
 .main__auth.active .main__backward {
   pointer-events: none;
-  opacity: 1;
+  opacity: 0.9;
 }
 .main__left {
   display: flex;
