@@ -320,6 +320,11 @@ body::-webkit-scrollbar-track {
 body._lock-scroll {
   overflow: hidden;
 }
+@media (min-width: 768px) {
+  body._lock-pc {
+    overflow: hidden;
+  }
+}
 
 .wrapper {
   min-height: 100%;
