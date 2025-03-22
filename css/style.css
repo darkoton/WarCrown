@@ -1018,18 +1018,6 @@ body._lock-scroll {
 
 .main {
   background: url("../img/home/main/bg.jpg") 0 0/cover no-repeat;
-  overflow: auto;
-}
-.main::-webkit-scrollbar {
-  width: 0px;
-  height: 0px;
-}
-.main::-webkit-scrollbar-thumb {
-  background: transparent;
-  border-radius: 0px;
-}
-.main::-webkit-scrollbar-track {
-  background: transparent;
 }
 .main__body {
   display: flex;

@@ -81,6 +81,13 @@ const authMain = document.querySelector('.main__auth');
 
 buttonBannerHeader.addEventListener('click', () => {
   authMain.classList.toggle('active');
-  document.body.classList.toggle('_lock-scroll');
+
+  if (window.innerWidth > 768) {
+    if (document.body.style.overflow == 'hidden') {
+      document.body.style.overflow = 'auto';
+    } else {
+      document.body.style.overflow = 'hidden';
+    }
+  }
 });
 ; //HEADER FEED
