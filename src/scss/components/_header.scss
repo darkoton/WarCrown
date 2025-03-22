@@ -1,6 +1,8 @@
 //< " ФАЙЛ СТИЛЕЙ ХЕДЕРА " >=============================================================================================================>//
 .header {
   font-family: $fontReemKufi;
+  position: relative;
+  z-index: 1000;
 
   &__top {
     background-color: $colorDarkBlue;

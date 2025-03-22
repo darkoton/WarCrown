@@ -2,6 +2,7 @@
   background-color: $colorGrayBlue;
   font-family: $fontRoboto;
   position: relative;
+  z-index: 999;
 
   &::after {
     content: "";
