@@ -1,8 +1,5 @@
 .main {
   background: url("../img/home/main/bg.jpg") 0 0 / cover no-repeat;
-  overflow: auto;
-  @include scrollbars(0px, transparent, transparent, 0px);
-
   &__body {
     display: flex;
     align-items: center;
