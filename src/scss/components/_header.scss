@@ -123,6 +123,7 @@
     z-index: 2;
     // background: url("../img/header/banner.svg") 0 0 / contain no-repeat;
     background: $colorBlue;
+    transition: all 0.3s ease 0s;
 
     &:before,
     &:after {
@@ -151,9 +152,17 @@
       border-left: 32px solid transparent;
     }
 
+    &.active {
+      background: $colorGreen;
+
+      &::before,
+      &::after {
+        border-top-color: $colorGreen;
+      }
+    }
+
     @media (any-hover: hover) {
       cursor: pointer;
-      transition: all 0.3s ease 0s;
       &:hover {
         background: $colorGreen;
 
