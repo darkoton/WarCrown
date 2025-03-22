@@ -386,6 +386,8 @@ body._lock-scroll {
 }
 .header {
   font-family: "Reem Kufi", sans-serif;
+  position: relative;
+  z-index: 1000;
 }
 .header__top {
   background-color: #152045;

@@ -346,6 +346,8 @@ body._lock-scroll {
 
 .header {
   font-family: "Reem Kufi", sans-serif;
+  position: relative;
+  z-index: 1000;
 }
 .header__top {
   background-color: #152045;
@@ -960,9 +962,9 @@ body._lock-scroll {
 .faq__item-text {
   font-size: 16px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__item-text {
-    font-size: calc(12px - -4 * (100vw - 320px) / 1600);
+    font-size: calc(12px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -973,9 +975,9 @@ body._lock-scroll {
 .faq__item-text {
   line-height: 19px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__item-text {
-    line-height: calc(15px - -4 * (100vw - 320px) / 1600);
+    line-height: calc(15px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1004,9 +1006,9 @@ body._lock-scroll {
 .faq__question {
   gap: 16px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__question {
-    gap: calc(12px - -4 * (100vw - 320px) / 1600);
+    gap: calc(12px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1020,9 +1022,9 @@ body._lock-scroll {
 .faq__crown {
   --size: 60px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__crown {
-    --size: calc(30px - -30 * (100vw - 320px) / 1600);
+    --size: calc(30px - -30 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1039,9 +1041,9 @@ body._lock-scroll {
 .faq__form {
   padding-top: 32px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form {
-    padding-top: calc(16px - -16 * (100vw - 320px) / 1600);
+    padding-top: calc(16px - -16 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1052,9 +1054,9 @@ body._lock-scroll {
 .faq__form {
   padding-left: 32px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form {
-    padding-left: calc(16px - -16 * (100vw - 320px) / 1600);
+    padding-left: calc(16px - -16 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1065,9 +1067,9 @@ body._lock-scroll {
 .faq__form {
   padding-right: 32px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form {
-    padding-right: calc(16px - -16 * (100vw - 320px) / 1600);
+    padding-right: calc(16px - -16 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1078,9 +1080,9 @@ body._lock-scroll {
 .faq__form {
   padding-bottom: 40px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form {
-    padding-bottom: calc(20px - -20 * (100vw - 320px) / 1600);
+    padding-bottom: calc(20px - -20 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1103,9 +1105,9 @@ body._lock-scroll {
 .faq__form::after {
   border-top-width: 38px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form::after {
-    border-top-width: calc(20px - -18 * (100vw - 320px) / 1600);
+    border-top-width: calc(20px - -18 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1116,9 +1118,9 @@ body._lock-scroll {
 .faq__form::after {
   border-right-width: 338px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form::after {
-    border-right-width: calc(275px - -63 * (100vw - 320px) / 1600);
+    border-right-width: calc(275px - -63 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1134,9 +1136,9 @@ body._lock-scroll {
 .faq__form-title {
   font-size: 36px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-title {
-    font-size: calc(32px - -4 * (100vw - 320px) / 1600);
+    font-size: calc(32px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1147,9 +1149,9 @@ body._lock-scroll {
 .faq__form-title {
   line-height: 54px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-title {
-    line-height: calc(50px - -4 * (100vw - 320px) / 1600);
+    line-height: calc(50px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1160,9 +1162,9 @@ body._lock-scroll {
 .faq__form-title {
   margin-bottom: 8px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-title {
-    margin-bottom: calc(4px - -4 * (100vw - 320px) / 1600);
+    margin-bottom: calc(4px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1180,9 +1182,9 @@ body._lock-scroll {
 .faq__form-auth {
   font-size: 18px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-auth {
-    font-size: calc(14px - -4 * (100vw - 320px) / 1600);
+    font-size: calc(14px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1193,9 +1195,9 @@ body._lock-scroll {
 .faq__form-auth {
   line-height: 21px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-auth {
-    line-height: calc(17px - -4 * (100vw - 320px) / 1600);
+    line-height: calc(17px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1206,9 +1208,9 @@ body._lock-scroll {
 .faq__form-auth {
   margin-bottom: 24px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-auth {
-    margin-bottom: calc(12px - -12 * (100vw - 320px) / 1600);
+    margin-bottom: calc(12px - -12 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1232,9 +1234,9 @@ body._lock-scroll {
 .faq__form-fields {
   gap: 24px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-fields {
-    gap: calc(12px - -12 * (100vw - 320px) / 1600);
+    gap: calc(12px - -12 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1251,14 +1253,40 @@ body._lock-scroll {
 .faq__form-field {
   padding: 8px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-field {
-    padding: calc(4px - -4 * (100vw - 320px) / 1600);
+    padding: calc(4px - -4 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
   .faq__form-field {
     padding: 4px;
+  }
+}
+.faq__form-field {
+  font-size: 18px;
+}
+@media (max-width: 1440px) {
+  .faq__form-field {
+    font-size: calc(14px - -4 * (100vw - 320px) / 1120);
+  }
+}
+@media (max-width: 320px) {
+  .faq__form-field {
+    font-size: 14px;
+  }
+}
+.faq__form-field {
+  line-height: 21px;
+}
+@media (max-width: 1440px) {
+  .faq__form-field {
+    line-height: calc(17px - -4 * (100vw - 320px) / 1120);
+  }
+}
+@media (max-width: 320px) {
+  .faq__form-field {
+    line-height: 17px;
   }
 }
 .faq__form-field::placeholder {
@@ -1272,9 +1300,9 @@ body._lock-scroll {
 .faq__form-submit {
   font-size: 16px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-submit {
-    font-size: calc(14px - -2 * (100vw - 320px) / 1600);
+    font-size: calc(14px - -2 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1285,9 +1313,9 @@ body._lock-scroll {
 .faq__form-submit {
   padding-top: 16px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-submit {
-    padding-top: calc(8px - -8 * (100vw - 320px) / 1600);
+    padding-top: calc(8px - -8 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
@@ -1298,9 +1326,9 @@ body._lock-scroll {
 .faq__form-submit {
   padding-bottom: 16px;
 }
-@media (max-width: 1920px) {
+@media (max-width: 1440px) {
   .faq__form-submit {
-    padding-bottom: calc(8px - -8 * (100vw - 320px) / 1600);
+    padding-bottom: calc(8px - -8 * (100vw - 320px) / 1120);
   }
 }
 @media (max-width: 320px) {
